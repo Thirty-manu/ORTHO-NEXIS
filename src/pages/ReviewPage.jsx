@@ -34,7 +34,7 @@ export default function ReviewPage() {
   useEffect(() => {
     async function fetchPublicReviews() {
       try {
-        const q = query(collection(db, "reviews"), where("rating", ">=", 4), orderBy("rating", "desc"), orderBy("createdAt", "desc"));
+        const q = query(collection(db, "reviews"), where("rating", ">=", 2), orderBy("rating", "desc"), orderBy("createdAt", "desc"));
         const snap = await getDocs(q);
         setPublicReviews(snap.docs.map((d) => ({ id: d.id, ...d.data() })));
       } catch (e) { console.error(e); } finally { setLoadingReviews(false); }
@@ -49,7 +49,7 @@ export default function ReviewPage() {
     if (!name.trim()) { setError("Please enter your name."); return; }
     setError(""); setSubmitting(true);
     try {
-      await addDoc(collection(db, "reviews"), { name: name.trim(), rating, comment: comment.trim(), isPositive: rating >= 4, uid: currentUser?.uid || null, createdAt: serverTimestamp() });
+      await addDoc(collection(db, "reviews"), { name: name.trim(), rating, comment: comment.trim(), isPositive: rating >= 2, uid: currentUser?.uid || null, createdAt: serverTimestamp() });
       setSuccess(true); setRating(0); setComment("");
     } catch (err) { setError("Something went wrong. Please try again."); }
     finally { setSubmitting(false); }
