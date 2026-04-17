@@ -132,14 +132,15 @@ img{display:block;max-width:100%}button{cursor:pointer;font-family:inherit}input
   .navbar-inner{
     min-height:74px;
   }
-  .navbar-logo-img{
-  display:block;
-  width:auto;
-  height:48px;
-  max-width:140px;
-  object-fit:contain;
-}
+  
   .mobile-menu{
     display:block;
+  }
+}
+
+.navbar-logo-img{
+}
+@media(max-width:768px){
+  .navbar-logo-img{
   }
 }
