@@ -85,8 +85,10 @@ export default function Navbar() {
             💬 WhatsApp
           </a>
           {isAdmin ? (
-            <Link to="/admin/reviews" className="mobile-nav-link" onClick={closeMenu}>📝 Patient Reviews</Link>
-            <button className="mobile-nav-link mobile-logout" onClick={handleLogout}>Logout Admin</button>
+            <>
+              <Link to="/admin/reviews" className="mobile-nav-link" onClick={closeMenu}>📝 Patient Reviews</Link>
+              <button className="mobile-nav-link mobile-logout" onClick={handleLogout}>Logout Admin</button>
+            </>
           ) : (
             <Link to="/admin-orthonexis" className="mobile-nav-link" onClick={closeMenu}>Staff Login</Link>
           )}
