@@ -48,8 +48,10 @@ export default function Navbar() {
 
         <div className="nav-right-desktop">
           {isAdmin ? (
-            <Link to="/admin/reviews" className="btn btn-outline" style={{marginRight:8}}>📝 Reviews</Link>
-            <button className="btn btn-ghost" onClick={handleLogout}>Logout</button>
+            <>
+              <Link to="/admin/reviews" className="btn btn-outline" style={{marginRight:8}}>📝 Reviews</Link>
+              <button className="btn btn-ghost" onClick={handleLogout}>Logout</button>
+            </>
           ) : (
             <Link to="/admin-orthonexis" className="btn btn-outline">Staff Login</Link>
           )}
