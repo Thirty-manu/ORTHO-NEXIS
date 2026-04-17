@@ -49,7 +49,7 @@ export default function Navbar() {
         <div className="nav-right-desktop">
           {isAdmin ? (
             <>
-              <Link to="/admin/reviews" className="btn btn-outline" style={{marginRight:8}}>📝 Reviews</Link>
+              <Link to="/admin-orthonexis/reviews" className="btn btn-outline" style={{marginRight:8}}>📝 Reviews</Link>
               <button className="btn btn-ghost" onClick={handleLogout}>Logout</button>
             </>
           ) : (
@@ -86,7 +86,7 @@ export default function Navbar() {
           </a>
           {isAdmin ? (
             <>
-              <Link to="/admin/reviews" className="mobile-nav-link" onClick={closeMenu}>📝 Patient Reviews</Link>
+              <Link to="/admin-orthonexis/reviews" className="mobile-nav-link" onClick={closeMenu}>📝 Patient Reviews</Link>
               <button className="mobile-nav-link mobile-logout" onClick={handleLogout}>Logout Admin</button>
             </>
           ) : (

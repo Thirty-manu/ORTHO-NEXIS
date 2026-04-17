@@ -23,8 +23,8 @@ export default function App() {
           <Route path="/admin-orthonexis/dashboard" element={<AdminDashboard />} />
           <Route path="*" element={<Navigate to="/" />} />
           <Route path="/reviews" element={<ReviewPage />} />
-          <Route path="/admin/reviews" element={<AdminReviewsPage />} />
-          <Route path="/admin/reviews" element={<AdminReviewsPage />} />
+          <Route path="/admin-orthonexis/reviews" element={<AdminReviewsPage />} />
+          <Route path="/admin-orthonexis/reviews" element={<AdminReviewsPage />} />
         </Routes>
       </Router>
     </AuthProvider>
