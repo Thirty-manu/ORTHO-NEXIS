@@ -7,6 +7,7 @@ export default function HomePage() {
     <main>
       <section className="hero">
         <div className="container">
+          <div style={{textAlign:"center",marginBottom:6,fontWeight:700,fontSize:18,color:"#0f3638",letterSpacing:0.5}}>Orthonexis Physiotherapy Health Group</div>
           <div className="hero-badge">📍 Grandview Building, 198, Kapsabet 30100</div>
           <h1>Pain Free.<br /><span>Move Healthy.</span></h1>
           <p>Orthonexis Physiotherapy Health Group offers expert, personalized physiotherapy and rehabilitation services — including home-based care — for every stage of your recovery journey.</p>
