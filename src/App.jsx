@@ -33,8 +33,6 @@ function App() {
           <Route path="/" element={<div style={{ padding: 40, textAlign: "center" }}><h1>Welcome to Orthonexis</h1></div>} />
           <Route path="/reviews" element={<ReviewPage />} />
           <Route path="/admin/reviews" element={<AdminReviewsPage />} />
-          <Route path="/reviews" element={<ReviewPage />} />
-          <Route path="/admin/reviews" element={<AdminReviewsPage />} />
         </Routes>
       </Router>
     </AuthProvider>
