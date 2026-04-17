@@ -31,7 +31,6 @@ export default function HomePage() {
           </div>
           <div className="steps-grid">
             {[
-              {n:1, title:'Create Account', desc:'Register in seconds with your name and email.'},
               {n:2, title:'Choose Service', desc:'Select the physiotherapy service that fits your needs.'},
               {n:3, title:'Pick Date & Time', desc:'Choose a convenient slot from available times.'},
               {n:4, title:'Get Confirmation', desc:'Our team confirms your booking instantly.'}
