@@ -64,3 +64,79 @@ img{display:block;max-width:100%}button{cursor:pointer;font-family:inherit}input
 .loading-spinner{display:flex;align-items:center;justify-content:center;padding:48px}.spinner{width:40px;height:40px;border:3px solid var(--color-border);border-top-color:var(--color-primary);border-radius:50%;animation:spin .8s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 @media(max-width:768px){.booking-layout{grid-template-columns:1fr}.booking-summary{position:static}.navbar-nav{display:none}.services-grid{grid-template-columns:1fr}.hero{padding:48px 0 40px}.stats-grid{grid-template-columns:repeat(2,1fr)}}
+\n
+.hamburger{
+  display:none;
+  width:46px;
+  height:46px;
+  border:none;
+  background:#ffffff;
+  border-radius:12px;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  gap:5px;
+  box-shadow:0 2px 8px rgba(12,95,165,0.10);
+}
+.ham-line{
+  width:22px;
+  height:2.5px;
+  background:#1a1f2e;
+  border-radius:99px;
+  transition:all .25s ease;
+}
+.ham-top-open{transform:translateY(7px) rotate(45deg);}
+.ham-mid-open{opacity:0;}
+.ham-bot-open{transform:translateY(-7px) rotate(-45deg);}
+
+.mobile-menu{
+  display:none;
+  padding:14px 16px 18px;
+  background:#fff;
+  border-top:1px solid rgba(12,95,165,0.14);
+  box-shadow:0 8px 20px rgba(12,95,165,0.08);
+}
+.mobile-nav-link{
+  display:block;
+  width:100%;
+  padding:13px 14px;
+  margin-bottom:8px;
+  border-radius:12px;
+  background:#f8fbff;
+  color:#1a1f2e;
+  font-weight:700;
+  text-decoration:none;
+  border:none;
+}
+.mobile-contact-btn{
+  display:block;
+  width:100%;
+  padding:13px 14px;
+  margin-bottom:8px;
+  border-radius:12px;
+  font-weight:700;
+  text-decoration:none;
+}
+.blue-btn{background:#dbeafe;color:#1d4ed8;}
+.green-btn{background:#dcfce7;color:#15803d;}
+.mobile-logout{text-align:left;cursor:pointer;}
+
+@media (max-width: 900px){
+  .desktop-nav,
+  .nav-right-desktop{
+    display:none !important;
+  }
+  .hamburger{
+    display:flex !important;
+  }
+  .navbar-inner{
+    min-height:74px;
+  }
+  .navbar-logo-img{
+    height:52px;
+    max-width:150px;
+  }
+  .mobile-menu{
+    display:block;
+  }
+}
