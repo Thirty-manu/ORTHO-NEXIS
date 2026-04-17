@@ -133,9 +133,12 @@ img{display:block;max-width:100%}button{cursor:pointer;font-family:inherit}input
     min-height:74px;
   }
   .navbar-logo-img{
-    height:52px;
-    max-width:150px;
-  }
+  display:block;
+  width:auto;
+  height:48px;
+  max-width:140px;
+  object-fit:contain;
+}
   .mobile-menu{
     display:block;
   }
