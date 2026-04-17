@@ -24,6 +24,7 @@ export default function App() {
           <Route path="*" element={<Navigate to="/" />} />
           <Route path="/reviews" element={<ReviewPage />} />
           <Route path="/admin/reviews" element={<AdminReviewsPage />} />
+          <Route path="/admin/reviews" element={<AdminReviewsPage />} />
         </Routes>
       </Router>
     </AuthProvider>
