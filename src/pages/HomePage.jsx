@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { SERVICES } from '../utils/services';
@@ -7,7 +8,29 @@ export default function HomePage() {
     <main>
       <section className="hero">
         <div className="container">
-          <div style={{textAlign:"center",marginBottom:6,fontWeight:700,fontSize:18,color:"#0f3638",letterSpacing:0.5}}>Orthonexis Physiotherapy Health Group</div>
+
+          {/* Hospital name — styled */}
+          <div style={{
+            textAlign:"center",
+            marginBottom: 12,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 10
+          }}>
+            <div style={{height:1, width:40, background:"rgba(255,255,255,0.4)"}}></div>
+            <span style={{
+              fontSize: 13,
+              fontWeight: 600,
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
+              color: "rgba(255,255,255,0.92)"
+            }}>
+              Orthonexis Physiotherapy Health Group
+            </span>
+            <div style={{height:1, width:40, background:"rgba(255,255,255,0.4)"}}></div>
+          </div>
+
           <div className="hero-badge">📍 Grandview Building, 198, Kapsabet 30100</div>
           <h1>Pain Free.<br /><span>Move Healthy.</span></h1>
           <p>Orthonexis Physiotherapy Health Group offers expert, personalized physiotherapy and rehabilitation services — including home-based care — for every stage of your recovery journey.</p>
