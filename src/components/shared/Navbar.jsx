@@ -34,6 +34,7 @@ export default function Navbar() {
         <div className="navbar-nav desktop-nav">
           <Link to="/" className={`nav-link ${pathname === '/' ? 'active' : ''}`}>Home</Link>
           <Link to="/book" className={`nav-link ${pathname === '/book' ? 'active' : ''}`}>Book Appointment</Link>
+          <Link to="/reviews" className={`nav-link ${pathname === '/reviews' ? 'active' : ''}`}>Reviews</Link>
           <a href="tel:+254729113409" className="nav-link">Call Us</a>
           <a
             href="https://wa.me/254704719695?text=Hello%20Orthonexis%2C%20I%20would%20like%20to%20book%20an%20appointment"
@@ -69,6 +70,7 @@ export default function Navbar() {
         <div className="mobile-menu">
           <Link to="/" className="mobile-nav-link" onClick={closeMenu}>Home</Link>
           <Link to="/book" className="mobile-nav-link" onClick={closeMenu}>Book Appointment</Link>
+          <Link to="/reviews" className="mobile-nav-link" onClick={closeMenu}>Reviews</Link>
           <a href="tel:+254729113409" className="mobile-contact-btn blue-btn" onClick={closeMenu}>📞 Call Us</a>
           <a
             href="https://wa.me/254704719695?text=Hello%20Orthonexis%2C%20I%20would%20like%20to%20book%20an%20appointment"
