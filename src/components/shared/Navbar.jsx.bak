@@ -1,0 +1,120 @@
+import React, { useState } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { useAuth } from '../../context/AuthContext';
+import toast from 'react-hot-toast';
+
+export default function Navbar() {
+  const { isAdmin, adminLogout } = useAuth();
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
+  const [contactOpen, setContactOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  function handleLogout() {
+    adminLogout();
+    navigate('/');
+    toast.success('Admin logged out');
+    setMobileOpen(false);
+  }
+
+  return (
+    <>
+      <nav className="navbar">
+        <div className="container navbar-inner">
+
+          {/* LOGO */}
+          <Link to="/" onClick={() => setMobileOpen(false)} className="navbar-logo-link">
+            <div className="navbar-logo-wrap">
+              <img
+                src="/logo.png"
+                alt="Orthonexis Physiotherapy Health Group"
+                className="navbar-logo-img"
+              />
+            </div>
+          </Link>
+
+          {/* DESKTOP NAV */}
+          <div className="navbar-nav desktop-nav">
+            <Link to="/" className={`nav-link ${pathname === '/' ? 'active' : ''}`}>Home</Link>
+            <Link to="/book" className={`nav-link ${pathname === '/book' ? 'active' : ''}`}>Book Appointment</Link>
+
+            {/* CONTACT DROPDOWN */}
+            <div style={{position:'relative'}}>
+              <button className={`nav-link nav-btn ${contactOpen?'active':''}`} onClick={() => setContactOpen(!contactOpen)}>
+                Contact Us
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style={{transform: contactOpen?'rotate(180deg)':'none', transition:'transform 200ms', marginLeft:4}}>
+                  <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+              {contactOpen && (
+                <div className="contact-dropdown">
+                  <a href="tel:0729113409" className="contact-item">
+                    <div className="contact-icon" style={{background:'#dbeafe'}}>📞</div>
+                    <div>
+                      <div className="contact-item-title">Call Us Now</div>
+                      <div className="contact-item-val blue">0729 113 409</div>
+                    </div>
+                  </a>
+                  <a href="https://wa.me/254704719695?text=Hello%20Orthonexis%2C%20I%20would%20like%20to%20inquire%20about%20your%20physiotherapy%20services."
+                    target="_blank" rel="noopener noreferrer" className="contact-item">
+                    <div className="contact-icon" style={{background:'#dcfce7'}}>💬</div>
+                    <div>
+                      <div className="contact-item-title">WhatsApp</div>
+                      <div className="contact-item-val green">+254 704 719 695</div>
+                    </div>
+                  </a>
+                  <div className="contact-footer">
+                    📍 Grandview Building, 198, Kapsabet 30100<br/>
+                    🕐 Mon–Fri: 8AM–6PM &nbsp;·&nbsp; Sat: 8AM–2PM
+                  </div>
+                </div>
+              )}
+            </div>
+            {isAdmin && <Link to="/admin-orthonexis/dashboard" className={`nav-link ${pathname.includes('/admin')?'active':''}`}>Admin Panel</Link>}
+          </div>
+
+          {/* DESKTOP RIGHT */}
+          <div className="nav-right-desktop">
+            <a href="tel:0729113409" className="nav-call-btn">📞 Call Now</a>
+            {isAdmin
+              ? <button className="btn btn-ghost" onClick={handleLogout}>Logout</button>
+              : <Link to="/admin-orthonexis" className="btn btn-outline" style={{fontSize:13}}>Staff Login</Link>}
+          </div>
+
+          {/* HAMBURGER */}
+          <button className="hamburger" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Toggle menu">
+            <span className={`ham-line ${mobileOpen?'ham-top-open':''}`}/>
+            <span className={`ham-line ham-mid ${mobileOpen?'ham-mid-open':''}`}/>
+            <span className={`ham-line ${mobileOpen?'ham-bot-open':''}`}/>
+          </button>
+        </div>
+
+        {/* MOBILE MENU */}
+        {mobileOpen && (
+          <div className="mobile-menu">
+            <Link to="/" className="mobile-nav-link" onClick={()=>setMobileOpen(false)}>🏠 Home</Link>
+            <Link to="/book" className="mobile-nav-link" onClick={()=>setMobileOpen(false)}>📅 Book Appointment</Link>
+            <div className="mobile-contact-box">
+              <div className="mobile-contact-title">Contact Us</div>
+              <a href="tel:0729113409" className="mobile-contact-btn blue-btn">
+                <span style={{fontSize:20}}>📞</span>
+                <div><div style={{fontWeight:700, fontSize:14}}>Call Us</div><div style={{fontSize:13, opacity:.85}}>0729 113 409</div></div>
+              </a>
+              <a href="https://wa.me/254704719695?text=Hello%20Orthonexis%2C%20I%20would%20like%20to%20inquire%20about%20your%20physiotherapy%20services."
+                target="_blank" rel="noopener noreferrer" className="mobile-contact-btn green-btn">
+                <span style={{fontSize:20}}>💬</span>
+                <div><div style={{fontWeight:700, fontSize:14}}>WhatsApp</div><div style={{fontSize:13, opacity:.85}}>+254 704 719 695</div></div>
+              </a>
+            </div>
+            {isAdmin && <Link to="/admin-orthonexis/dashboard" className="mobile-nav-link" onClick={()=>setMobileOpen(false)}>⚙️ Admin Panel</Link>}
+            {isAdmin
+              ? <button className="mobile-nav-link mobile-logout" onClick={handleLogout}>🚪 Logout Admin</button>
+              : <Link to="/admin-orthonexis" className="mobile-nav-link" onClick={()=>setMobileOpen(false)}>🔐 Staff Login</Link>}
+            <div className="mobile-location">📍 Grandview Building, 198, Kapsabet 30100 &nbsp;·&nbsp; 🕐 Mon–Fri: 8AM–6PM</div>
+          </div>
+        )}
+      </nav>
+      {contactOpen && <div onClick={() => setContactOpen(false)} style={{position:'fixed',inset:0,zIndex:200}}/>}
+    </>
+  );
+}
