@@ -48,6 +48,7 @@ export default function Navbar() {
 
         <div className="nav-right-desktop">
           {isAdmin ? (
+            <Link to="/admin/reviews" className="btn btn-outline" style={{marginRight:8}}>📝 Reviews</Link>
             <button className="btn btn-ghost" onClick={handleLogout}>Logout</button>
           ) : (
             <Link to="/admin-orthonexis" className="btn btn-outline">Staff Login</Link>
@@ -82,6 +83,7 @@ export default function Navbar() {
             💬 WhatsApp
           </a>
           {isAdmin ? (
+            <Link to="/admin/reviews" className="mobile-nav-link" onClick={closeMenu}>📝 Patient Reviews</Link>
             <button className="mobile-nav-link mobile-logout" onClick={handleLogout}>Logout Admin</button>
           ) : (
             <Link to="/admin-orthonexis" className="mobile-nav-link" onClick={closeMenu}>Staff Login</Link>

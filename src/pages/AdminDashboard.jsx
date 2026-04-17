@@ -113,6 +113,7 @@ export default function AdminDashboard() {
 
         <div className="stats-grid">
           {[
+            {icon:'📝', value:'View', label:'Reviews', link:'/admin/reviews'},
             {icon:'📋', value:counts.total, label:'Total'},
             {icon:'⏳', value:counts.pending, label:'Pending', highlight:counts.pending>0},
             {icon:'✅', value:counts.confirmed, label:'Confirmed'},
