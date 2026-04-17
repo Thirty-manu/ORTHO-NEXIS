@@ -120,7 +120,7 @@ export default function AdminDashboard() {
             {icon:'🎯', value:counts.completed, label:'Completed'},
             {icon:'❌', value:counts.cancelled, label:'Cancelled'}
           ].map(s=>(
-            <div className="stat-card" key={s.label} style={s.highlight?{borderColor:'#e67e22',background:'#fff8f0'}:{}}>
+            <div className="stat-card" key={s.label} onClick={()=>s.link&&navigate(s.link)} style={{...( s.highlight?{borderColor:'#e67e22',background:'#fff8f0'}:{}), cursor:s.link?'pointer':'default'}}>
               <div className="stat-icon">{s.icon}</div>
               <div className="stat-value" style={s.highlight?{color:'#e67e22'}:{}}>{s.value}</div>
               <div className="stat-label">{s.label}</div>
