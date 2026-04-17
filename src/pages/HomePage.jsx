@@ -26,7 +26,7 @@ export default function HomePage() {
         <div className="container">
           <div className="section-header">
             <div className="section-tag">How It Works</div>
-            <h2>Your Recovery in 4 Simple Steps</h2>
+            <h2>Your Recovery in 3 Simple Steps</h2>
             <p>From booking to full recovery, we make it seamless.</p>
           </div>
           <div className="steps-grid">
