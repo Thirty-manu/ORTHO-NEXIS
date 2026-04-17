@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { SERVICES } from '../utils/services';
@@ -9,26 +8,28 @@ export default function HomePage() {
       <section className="hero">
         <div className="container">
 
-          {/* Hospital name — styled */}
+
           <div style={{
             textAlign:"center",
-            marginBottom: 12,
+            marginBottom: 16,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            gap: 10
+            gap: 14,
+            width: "100%"
           }}>
-            <div style={{height:1, width:40, background:"rgba(255,255,255,0.4)"}}></div>
+            <div style={{height:1, flex:1, maxWidth:60, background:"rgba(255,255,255,0.35)"}}></div>
             <span style={{
-              fontSize: 13,
-              fontWeight: 600,
-              letterSpacing: "0.18em",
+              fontSize: 17,
+              fontWeight: 700,
+              letterSpacing: "0.12em",
               textTransform: "uppercase",
-              color: "rgba(255,255,255,0.92)"
+              color: "#6dd5a0",
+              whiteSpace: "nowrap"
             }}>
               Orthonexis Physiotherapy Health Group
             </span>
-            <div style={{height:1, width:40, background:"rgba(255,255,255,0.4)"}}></div>
+            <div style={{height:1, flex:1, maxWidth:60, background:"rgba(255,255,255,0.35)"}}></div>
           </div>
 
           <div className="hero-badge">📍 Grandview Building, 198, Kapsabet 30100</div>
