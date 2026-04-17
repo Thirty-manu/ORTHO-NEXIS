@@ -3,12 +3,12 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB8X5PWZVKWov8iVJkBhNHcvr5ztcck_Wo",
-  authDomain: "orthonexis-d761c.firebaseapp.com",
-  projectId: "orthonexis-d761c",
-  storageBucket: "orthonexis-d761c.firebasestorage.app",
-  messagingSenderId: "1073954220909",
-  appId: "1:1073954220909:web:5774d5a10467f186b44864"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID
 };
 
 const app = initializeApp(firebaseConfig);
