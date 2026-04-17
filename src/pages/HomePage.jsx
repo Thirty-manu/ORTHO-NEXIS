@@ -31,9 +31,9 @@ export default function HomePage() {
           </div>
           <div className="steps-grid">
             {[
-              {n:2, title:'Choose Service', desc:'Select the physiotherapy service that fits your needs.'},
-              {n:3, title:'Pick Date & Time', desc:'Choose a convenient slot from available times.'},
-              {n:4, title:'Get Confirmation', desc:'Our team confirms your booking instantly.'}
+              {n:1, title:'Choose Service', desc:'Select the physiotherapy service that fits your needs.'},
+              {n:2, title:'Pick Date & Time', desc:'Choose a convenient slot from available times.'},
+              {n:3, title:'Get Confirmation', desc:'Our team confirms your booking instantly.'}
             ].map(s => (
               <div className="step-card" key={s.n}>
                 <div className="step-num">{s.n}</div>
