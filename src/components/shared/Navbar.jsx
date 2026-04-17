@@ -47,14 +47,14 @@ export default function Navbar() {
 
               {contactOpen && (
                 <div style={{position:'absolute', top:'calc(100% + 8px)', left:0, background:'var(--color-surface)', border:'1.5px solid var(--color-border)', borderRadius:'var(--radius-lg)', boxShadow:'var(--shadow-lg)', width:240, zIndex:200, overflow:'hidden'}}>
-                  <a href="tel:0729113409"
+                  <a href="tel:+254729113409"
                     style={{display:'flex', alignItems:'center', gap:12, padding:'14px 16px', borderBottom:'1px solid var(--color-border)', textDecoration:'none'}}
                     onMouseEnter={e=>e.currentTarget.style.background='var(--color-primary-light)'}
                     onMouseLeave={e=>e.currentTarget.style.background='transparent'}>
                     <div style={{width:36, height:36, borderRadius:'50%', background:'#e3f2fd', display:'flex', alignItems:'center', justifyContent:'center', fontSize:18, flexShrink:0}}>📞</div>
                     <div>
                       <div style={{fontWeight:700, fontSize:13, color:'var(--color-text)'}}>Call Us</div>
-                      <div style={{fontSize:12, color:'var(--color-primary)', fontWeight:600}}>0729 113 409</div>
+                      <div style={{fontSize:12, color:'var(--color-primary)', fontWeight:600}}>+254 729 113 409</div>
                     </div>
                   </a>
                   <a href="https://wa.me/254704719695?text=Hello%20Orthonexis%2C%20I%20would%20like%20to%20make%20an%20inquiry."
