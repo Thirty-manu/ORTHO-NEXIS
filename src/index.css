@@ -395,13 +395,7 @@ img{display:block;max-width:100%}button{cursor:pointer;font-family:inherit}input
     height: 44px !important;
     width: auto !important;
   }
-  .navbar-logo-link::after {
-    content: "Orthonexis";
-    font-size: 16px;
-    font-weight: 700;
-    color: #01696f;
-    letter-spacing: 0.04em;
-  }
+
   .mobile-nav-row {
     width: 100% !important;
     max-width: 100% !important;
