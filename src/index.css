@@ -322,3 +322,18 @@ img{display:block;max-width:100%}button{cursor:pointer;font-family:inherit}input
     padding-right: 4px;
   }
 }
+
+/* ── Shrink logo on mobile to give nav more room ── */
+@media (max-width: 768px) {
+  .navbar-logo-img { 
+    height: 32px !important; 
+    width: auto !important;
+  }
+  .navbar-logo-link { 
+    flex-shrink: 0;
+    margin-right: 4px;
+  }
+  .mobile-nav-row {
+    max-width: calc(100vw - 70px) !important;
+  }
+}
