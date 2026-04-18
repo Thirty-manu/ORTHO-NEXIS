@@ -305,3 +305,20 @@ img{display:block;max-width:100%}button{cursor:pointer;font-family:inherit}input
   }
   .navbar-inner { height: 60px; }
 }
+
+/* ── Fix hamburger cut off ── */
+@media (max-width: 768px) {
+  .navbar-inner { padding-right: 12px !important; }
+  .hamburger-btn { 
+    padding: 6px 8px !important;
+    margin-right: 4px !important;
+    flex-shrink: 0 !important;
+  }
+  .mobile-nav-row { 
+    overflow: hidden;
+    max-width: calc(100vw - 90px);
+  }
+  .mobile-nav-links {
+    padding-right: 4px;
+  }
+}
