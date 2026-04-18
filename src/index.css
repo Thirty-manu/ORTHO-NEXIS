@@ -418,3 +418,20 @@ img{display:block;max-width:100%}button{cursor:pointer;font-family:inherit}input
     white-space: nowrap;
   }
 }
+
+/* ── Logo visibility fix: teal background circle ── */
+.navbar-logo-img {
+  background: #01696f;
+  border-radius: 50%;
+  padding: 3px;
+}
+@media (max-width: 768px) {
+  .navbar-logo-img {
+    height: 52px !important;
+    width: 52px !important;
+    background: #01696f !important;
+    border-radius: 50% !important;
+    padding: 4px !important;
+    object-fit: contain !important;
+  }
+}
