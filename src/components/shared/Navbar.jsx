@@ -16,36 +16,27 @@ export default function Navbar() {
     setMobileOpen(false);
   }
 
-  function closeMenu() {
-    setMobileOpen(false);
-  }
+  function closeMenu() { setMobileOpen(false); }
 
   return (
     <nav className="navbar">
       <div className="container navbar-inner">
+
+        {/* Logo */}
         <Link to="/" onClick={closeMenu} className="navbar-logo-link">
-          <img
-            src="/logo.png"
-            alt="Orthonexis Physiotherapy Health Group"
-            className="navbar-logo-img"
-          />
+          <img src="/logo.png" alt="Orthonexis" className="navbar-logo-img" />
         </Link>
 
+        {/* Desktop nav */}
         <div className="navbar-nav desktop-nav">
-          <Link to="/" className={`nav-link ${pathname === '/' ? 'active' : ''}`}>Home</Link>
-          <Link to="/book" className={`nav-link ${pathname === '/book' ? 'active' : ''}`}>Book Appointment</Link>
-          <Link to="/reviews" className={`nav-link ${pathname === '/reviews' ? 'active' : ''}`}>Reviews</Link>
+          <Link to="/" className={`nav-link ${pathname==='/'?'active':''}`}>Home</Link>
+          <Link to="/book" className={`nav-link ${pathname==='/book'?'active':''}`}>Book Appointment</Link>
+          <Link to="/reviews" className={`nav-link ${pathname==='/reviews'?'active':''}`}>Reviews</Link>
           <a href="tel:+254729113409" className="nav-link">Call Us</a>
-          <a
-            href="https://wa.me/254704719695?text=Hello%20Orthonexis%2C%20I%20would%20like%20to%20book%20an%20appointment"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="nav-link"
-          >
-            WhatsApp
-          </a>
+          <a href="https://wa.me/254704719695?text=Hello%20Orthonexis%2C%20I%20would%20like%20to%20book%20an%20appointment" target="_blank" rel="noopener noreferrer" className="nav-link">WhatsApp</a>
         </div>
 
+        {/* Desktop right */}
         <div className="nav-right-desktop">
           {isAdmin ? (
             <>
@@ -57,40 +48,36 @@ export default function Navbar() {
           )}
         </div>
 
-        <button
-          className="hamburger"
-          type="button"
-          aria-label="Open menu"
-          onClick={() => setMobileOpen(!mobileOpen)}
-        >
-          <span className={mobileOpen ? 'ham-line ham-top-open' : 'ham-line'}></span>
-          <span className={mobileOpen ? 'ham-line ham-mid-open' : 'ham-line'}></span>
-          <span className={mobileOpen ? 'ham-line ham-bot-open' : 'ham-line'}></span>
-        </button>
+        {/* Mobile: horizontal nav + hamburger */}
+        <div className="mobile-nav-row">
+          <div className="mobile-nav-links">
+            <Link to="/" className={`nav-link ${pathname==='/'?'active':''}`} onClick={closeMenu}>Home</Link>
+            <Link to="/book" className={`nav-link ${pathname==='/book'?'active':''}`} onClick={closeMenu}>Book</Link>
+            <Link to="/reviews" className={`nav-link ${pathname==='/reviews'?'active':''}`} onClick={closeMenu}>Reviews</Link>
+            <a href="tel:+254729113409" className="nav-link" onClick={closeMenu}>Call Us</a>
+            <a href="https://wa.me/254704719695?text=Hello%20Orthonexis%2C%20I%20would%20like%20to%20book%20an%20appointment" target="_blank" rel="noopener noreferrer" className="nav-link" onClick={closeMenu}>WhatsApp</a>
+          </div>
+          <button
+            className="hamburger-btn"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Menu"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+
       </div>
 
+      {/* Mobile dropdown — Staff Login only */}
       {mobileOpen && (
-        <div className="mobile-menu">
-          <Link to="/" className="mobile-nav-link" onClick={closeMenu}>Home</Link>
-          <Link to="/book" className="mobile-nav-link" onClick={closeMenu}>Book Appointment</Link>
-          <Link to="/reviews" className="mobile-nav-link" onClick={closeMenu}>Reviews</Link>
-          <a href="tel:+254729113409" className="mobile-contact-btn blue-btn" onClick={closeMenu}>📞 Call Us</a>
-          <a
-            href="https://wa.me/254704719695?text=Hello%20Orthonexis%2C%20I%20would%20like%20to%20book%20an%20appointment"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mobile-contact-btn green-btn"
-            onClick={closeMenu}
-          >
-            💬 WhatsApp
-          </a>
+        <div className="mobile-dropdown">
           {isAdmin ? (
             <>
-              <Link to="/admin-orthonexis/reviews" className="mobile-nav-link" onClick={closeMenu}>📝 Patient Reviews</Link>
-              <button className="mobile-nav-link mobile-logout" onClick={handleLogout}>Logout Admin</button>
+              <Link to="/admin-orthonexis/reviews" className="mobile-dropdown-item" onClick={closeMenu}>📝 Patient Reviews</Link>
+              <button className="mobile-dropdown-item" onClick={handleLogout}>Logout</button>
             </>
           ) : (
-            <Link to="/admin-orthonexis" className="mobile-nav-link" onClick={closeMenu}>Staff Login</Link>
+            <Link to="/admin-orthonexis" className="mobile-dropdown-item" onClick={closeMenu}>🔐 Staff Login</Link>
           )}
         </div>
       )}
