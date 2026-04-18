@@ -24,7 +24,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link to="/" onClick={closeMenu} className="navbar-logo-link">
-          <img src="/logo.png" alt="Orthonexis" className="navbar-logo-img" />
+          <span style={{fontWeight:800, fontSize:18, color:"#01696f", letterSpacing:"0.04em"}}>Orthonexis</span>
         </Link>
 
         {/* Desktop nav */}

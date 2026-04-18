@@ -9,6 +9,9 @@ export default function HomePage() {
         <div className="container">
 
 
+          <div style={{textAlign:"center", marginBottom:16}}>
+            <img src="/logo.png" alt="Orthonexis" style={{height:120, width:120, objectFit:"contain", borderRadius:"50%", background:"#fff", boxShadow:"0 4px 20px rgba(0,0,0,0.15)", display:"inline-block"}} />
+          </div>
           <div style={{
             textAlign:"center",
             marginBottom: 16,
