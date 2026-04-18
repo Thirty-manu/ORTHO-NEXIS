@@ -33,7 +33,7 @@ export default function Navbar() {
           <Link to="/book" className={`nav-link ${pathname==='/book'?'active':''}`}>Book Appointment</Link>
           <Link to="/reviews" className={`nav-link ${pathname==='/reviews'?'active':''}`}>Reviews</Link>
           <a href="tel:+254729113409" className="nav-link">Call Us</a>
-          <a href="https://wa.me/254704719695?text=Hello%20Orthonexis%2C%20I%20would%20like%20to%20book%20an%20appointment" target="_blank" rel="noopener noreferrer" className="nav-link">💬 WA</a>
+          <a href="https://wa.me/254704719695?text=Hello%20Orthonexis%2C%20I%20would%20like%20to%20book%20an%20appointment" target="_blank" rel="noopener noreferrer" className="nav-link">WhatsApp Us</a>
         </div>
 
         {/* Desktop right */}
@@ -55,7 +55,7 @@ export default function Navbar() {
             <Link to="/book" className={`nav-link ${pathname==='/book'?'active':''}`} onClick={closeMenu}>Book</Link>
             <Link to="/reviews" className={`nav-link ${pathname==='/reviews'?'active':''}`} onClick={closeMenu}>Reviews</Link>
             <a href="tel:+254729113409" className="nav-link" onClick={closeMenu}>Call Us</a>
-            <a href="https://wa.me/254704719695?text=Hello%20Orthonexis%2C%20I%20would%20like%20to%20book%20an%20appointment" target="_blank" rel="noopener noreferrer" className="nav-link" onClick={closeMenu}>💬 WA</a>
+            <a href="https://wa.me/254704719695?text=Hello%20Orthonexis%2C%20I%20would%20like%20to%20book%20an%20appointment" target="_blank" rel="noopener noreferrer" className="nav-link" onClick={closeMenu}>WhatsApp Us</a>
           </div>
           <button
             className="hamburger-btn"
