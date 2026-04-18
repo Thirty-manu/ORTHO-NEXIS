@@ -33,6 +33,22 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section style={{padding:'70px 0', background:'#fff'}}>
+        <div className="container">
+          <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:48,alignItems:'center'}}>
+            <div>
+              <div style={{display:'inline-block',background:'#e6f4ef',color:'#01696f',fontSize:12,fontWeight:700,letterSpacing:'0.1em',textTransform:'uppercase',padding:'4px 14px',borderRadius:20,marginBottom:16}}>About Us</div>
+              <h2 style={{fontSize:28,fontWeight:800,color:'#1a2a4a',marginBottom:18,lineHeight:1.3}}>Dedicated to Evidence-Based Rehabilitation</h2>
+              <p style={{color:'#4a5568',fontSize:15,lineHeight:1.85,marginBottom:14}}>Orthonexis Physiotherapy is dedicated to providing evidence-based rehabilitation and personalized treatment plans.</p>
+              <p style={{color:'#4a5568',fontSize:15,lineHeight:1.85}}>Our goal is to restore movement, reduce pain, and improve quality of life through modern physiotherapy techniques.</p>
+            </div>
+            <div style={{borderRadius:16,overflow:'hidden',boxShadow:'0 8px 32px rgba(0,0,0,0.10)',background:'#f0f7f4',display:'flex',alignItems:'center',justifyContent:'center',padding:40,minHeight:280}}>
+              <img src="/logo.png" alt="Orthonexis Physiotherapy Health Group" style={{width:'100%',maxWidth:260,objectFit:'contain',display:'block'}} loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="how-section">
         <div className="container">
           <div className="section-header">
