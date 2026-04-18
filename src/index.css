@@ -375,3 +375,46 @@ img{display:block;max-width:100%}button{cursor:pointer;font-family:inherit}input
     white-space: nowrap;
   }
 }
+
+/* ── Mobile: centered logo row on top ── */
+@media (max-width: 768px) {
+  .navbar-inner {
+    flex-direction: column !important;
+    height: auto !important;
+    padding: 10px 12px 6px !important;
+    gap: 8px !important;
+    align-items: center !important;
+  }
+  .navbar-logo-link {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    align-self: center !important;
+  }
+  .navbar-logo-img {
+    height: 44px !important;
+    width: auto !important;
+  }
+  .navbar-logo-link::after {
+    content: "Orthonexis";
+    font-size: 16px;
+    font-weight: 700;
+    color: #01696f;
+    letter-spacing: 0.04em;
+  }
+  .mobile-nav-row {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .mobile-nav-links {
+    flex: 1;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .mobile-nav-links::-webkit-scrollbar { display: none; }
+  .mobile-nav-links .nav-link {
+    font-size: 12px !important;
+    padding: 6px 10px !important;
+    white-space: nowrap;
+  }
+}
