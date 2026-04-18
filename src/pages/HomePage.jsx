@@ -35,7 +35,7 @@ export default function HomePage() {
 
       <section style={{padding:'70px 0', background:'#fff'}}>
         <div className="container">
-          <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:48,alignItems:'center'}}>
+          <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(280px,1fr))',gap:32,alignItems:'center'}}>
             <div>
               <div style={{display:'inline-block',background:'#e6f4ef',color:'#01696f',fontSize:12,fontWeight:700,letterSpacing:'0.1em',textTransform:'uppercase',padding:'4px 14px',borderRadius:20,marginBottom:16}}>About Us</div>
               <h2 style={{fontSize:28,fontWeight:800,color:'#1a2a4a',marginBottom:18,lineHeight:1.3}}>Dedicated to Evidence-Based Rehabilitation</h2>
@@ -112,7 +112,7 @@ export default function HomePage() {
 
       <section style={{padding:'60px 0',background:'#eaf4f0'}}>
         <div className="container">
-          <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:32,alignItems:'center'}}>
+          <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(280px,1fr))',gap:32,alignItems:'center'}}>
             <div>
               <div style={{display:'inline-block',background:'#1a5c3a',color:'#6dd5a0',fontSize:12,fontWeight:700,letterSpacing:'0.1em',textTransform:'uppercase',padding:'4px 14px',borderRadius:20,marginBottom:16}}>Expert Care</div>
               <h2 style={{fontSize:28,fontWeight:800,color:'#1a2a4a',marginBottom:14,lineHeight:1.3}}>Hands-On Therapy from Trained Professionals</h2>
