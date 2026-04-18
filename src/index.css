@@ -279,3 +279,29 @@ img{display:block;max-width:100%}button{cursor:pointer;font-family:inherit}input
   }
   .mobile-dropdown-item:hover { background: var(--color-surface-offset); }
 }
+
+/* ── Mobile Nav Links - bigger + better colors ── */
+@media (max-width: 768px) {
+  .mobile-nav-links .nav-link {
+    white-space: nowrap;
+    font-size: 14px !important;
+    padding: 8px 12px !important;
+    font-weight: 600 !important;
+    color: #0f3638 !important;
+    background: #f0f7f7 !important;
+    border-radius: 20px !important;
+    border: 1.5px solid #cce4e4 !important;
+    text-decoration: none !important;
+  }
+  .mobile-nav-links .nav-link.active {
+    background: #01696f !important;
+    color: #ffffff !important;
+    border-color: #01696f !important;
+  }
+  .mobile-nav-links .nav-link:hover {
+    background: #01696f !important;
+    color: #ffffff !important;
+    border-color: #01696f !important;
+  }
+  .navbar-inner { height: 60px; }
+}
