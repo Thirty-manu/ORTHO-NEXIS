@@ -435,27 +435,3 @@ img{display:block;max-width:100%}button{cursor:pointer;font-family:inherit}input
     object-fit: contain !important;
   }
 }
-
-/* ── Logo 3D Zoom / Pulse Animation ── */
-@keyframes logoPulse {
-  0%   { transform: scale(1);    }
-  50%  { transform: scale(1.12); }
-  100% { transform: scale(1);    }
-}
-
-@keyframes logoDepth {
-  0%   { transform: scale(1)    rotate3d(0,1,0, 0deg);  }
-  25%  { transform: scale(1.08) rotate3d(0,1,0, 8deg);  }
-  75%  { transform: scale(1.08) rotate3d(0,1,0,-8deg);  }
-  100% { transform: scale(1)    rotate3d(0,1,0, 0deg);  }
-}
-
-.navbar-logo-img {
-  animation: logoDepth 4s ease-in-out infinite;
-  transform-style: preserve-3d;
-  will-change: transform;
-}
-
-.navbar-logo-img:hover {
-  animation: logoPulse 0.6s ease-in-out;
-}
