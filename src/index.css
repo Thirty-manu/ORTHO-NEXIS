@@ -171,3 +171,50 @@ img{display:block;max-width:100%}button{cursor:pointer;font-family:inherit}input
     max-width:95px;
   }
 }
+
+/* ── Mobile Nav: horizontal scrollable row ── */
+@media (max-width: 768px) {
+  .nav-right-desktop { display: none; }
+  .mobile-menu-btn { display: none !important; }
+  .navbar-nav {
+    display: flex !important;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 2px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 0 4px;
+  }
+  .navbar-nav::-webkit-scrollbar { display: none; }
+  .navbar-nav a {
+    white-space: nowrap;
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+  .navbar-inner { height: 56px; gap: 8px; }
+  .navbar-logo-img { height: 36px; }
+}
+
+/* ── Mobile Hero Polish ── */
+@media (max-width: 768px) {
+  .hero h1 { font-size: clamp(2rem, 8vw, 3rem); }
+  .hero p { font-size: 15px; line-height: 1.7; }
+  .hero-actions { flex-direction: column; gap: 12px; }
+  .hero-cta, .hero-cta-outline {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 16px;
+    border-radius: 12px;
+  }
+  .hero-stats {
+    display: flex;
+    justify-content: space-around;
+    background: rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 16px 8px;
+    margin-top: 24px;
+  }
+  .hero-stat strong { font-size: 22px; }
+  .hero-stat span { font-size: 11px; }
+  .hero-badge { font-size: 12px; padding: 6px 14px; }
+}
