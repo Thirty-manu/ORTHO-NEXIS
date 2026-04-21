@@ -90,7 +90,7 @@ export default function BookingPage() {
 
   return (
     <div className="booking-page">
-      <div className="container" style={{maxWidth:620, paddingTop:32, paddingBottom:60}}>
+      <div className="container" style={{maxWidth:680, width:'100%', paddingTop:32, paddingBottom:60}}>
         <h1 style={{fontSize:'clamp(1.4rem,4vw,1.8rem)', marginBottom:6}}>Book an Appointment</h1>
         <p style={{color:'var(--color-text-muted)', marginBottom:28, fontSize:14}}>📍 Orthonexis Physiotherapy — Grandview Building, Kapsabet 30100</p>
 
@@ -132,7 +132,7 @@ export default function BookingPage() {
                         <div style={{display:'flex', flexDirection:'column', gap:8}}>
                           {SERVICES.map(s => (
                             <div key={s.id}
-                              onClick={() => { set('serviceId', s.id); set('subService', ''); set('isHomeCare', s.id==='home-care'); }}
+                              onClick={() => { set('serviceId', s.id); set('subService', ''); set('isHomeCare', s.id==='home-care'); setStep(1); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
                               style={{padding:'12px 14px', border:`2px solid ${form.serviceId===s.id?'var(--color-primary)':'var(--color-border)'}`, borderRadius:10, cursor:'pointer', display:'flex', alignItems:'center', gap:12, background:form.serviceId===s.id?'var(--color-primary-light)':'var(--color-surface)', transition:'all 180ms'}}>
                               <span style={{fontSize:20}}>{s.icon}</span>
                               <div style={{flex:1}}>

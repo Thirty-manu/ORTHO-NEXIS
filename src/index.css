@@ -429,3 +429,33 @@ img{display:block;max-width:100%}button{cursor:pointer;font-family:inherit}input
     object-fit: contain !important;
   }
 }
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero h1,
+  .section-header h2 {
+    line-height: 1.2;
+  }
+
+  .time-slots {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .btn,
+  .hero-cta,
+  .hero-cta-outline {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .services-grid,
+  .steps-grid,
+  .booking-layout {
+    grid-template-columns: 1fr !important;
+  }
+}
