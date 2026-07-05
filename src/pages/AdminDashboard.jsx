@@ -19,12 +19,12 @@ Your appointment at *Orthonexis Physiotherapy Health Group* has been *CONFIRMED*
 ${appointment.subService ? `• Concern: ${appointment.subService}` : ''}
 • Date: ${appointment.date}
 • Time: ${appointment.time}
-• Location: ${appointment.isHomeCare ? `🏠 Home Visit - ${appointment.address}` : '🏥 Grandview Building, 198, Kapsabet 30100'}
+• Location: ${appointment.isHomeCare ? `🏠 Home Visit - ${appointment.address}` : '🏥 next to Rubis petrol station, Kapsabet Sports house MCCU Building'}
 • Ref No: ${appointment.refCode || '—'}
 
 ⚠️ Please arrive 10 minutes early.
 
-For any changes call: 0729 113 409
+For any changes call: 0710 622 217
 *Pain free. Move healthy.* 💚`;
   }
 
@@ -34,8 +34,8 @@ For any changes call: 0729 113 409
 We regret to inform you that your appointment at *Orthonexis Physiotherapy* on *${appointment.date}* at *${appointment.time}* has been *cancelled* ❌.
 
 To reschedule, please call us:
-📞 0729 113 409
-💬 WhatsApp: +254 704 719 695
+📞 +254710622217
+💬 WhatsApp: +254 710 622 217
 
 We apologize for any inconvenience.
 *Orthonexis Physiotherapy Health Group*`;
@@ -49,8 +49,8 @@ Your physiotherapy session at *Orthonexis Physiotherapy Health Group* is now mar
 Thank you for choosing us! We hope you are feeling better.
 
 For follow-up appointments:
-📞 0729 113 409
-💬 WhatsApp: +254 704 719 695
+📞 +254710622217
+💬 WhatsApp: +254 710 622 217
 
 *Pain free. Move healthy.* 💚`;
   }
@@ -108,7 +108,7 @@ export default function AdminDashboard() {
       <div className="container">
         <div className="dashboard-header">
           <h1>Admin Dashboard</h1>
-          <p>Orthonexis Physiotherapy · Grandview Building, 198, Kapsabet 30100</p>
+          <p>Orthonexis Physiotherapy · next to Rubis petrol station, Kapsabet Sports house MCCU Building</p>
         </div>
 
         <div className="stats-grid">

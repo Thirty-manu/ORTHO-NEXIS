@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { SERVICES } from '../utils/services';
+import SiteFooter from '../components/SiteFooter';
 
 export default function HomePage() {
   return (
@@ -15,7 +16,7 @@ export default function HomePage() {
             <span style={{fontSize:17,fontWeight:700,letterSpacing:"0.12em",textTransform:"uppercase",color:"#6dd5a0",whiteSpace:"nowrap"}}>Orthonexis Physiotherapy Health Group</span>
             <div style={{height:1, flex:1, maxWidth:60, background:"rgba(255,255,255,0.35)"}}></div>
           </div>
-          <div className="hero-badge">📍 Grandview Building, 198, Kapsabet 30100</div>
+          <div className="hero-badge">📍 next to Rubis petrol station, Kapsabet Sports house MCCU Building</div>
           <h1>Pain Free.<br /><span>Move Healthy.</span></h1>
           <p>Orthonexis Physiotherapy Health Group offers expert, personalized physiotherapy and rehabilitation services — including home-based care — for every stage of your recovery journey.</p>
           <div className="hero-actions">
@@ -121,29 +122,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section style={{background:'#1a2a4a',color:'#fff',padding:'60px 0'}}>
-        <div className="container" style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:32}}>
-          <div>
-            <h3 style={{fontFamily:'var(--font-display)',fontSize:20,marginBottom:12,color:'#6dd5a0'}}>Orthonexis</h3>
-            <p style={{fontSize:14,opacity:.75,lineHeight:1.7}}>Pain free. Move healthy.<br/>Your trusted physiotherapy partner in Kapsabet.</p>
-          </div>
-          <div>
-            <h4 style={{fontSize:13,fontWeight:700,textTransform:'uppercase',letterSpacing:'0.08em',opacity:.5,marginBottom:12}}>Location</h4>
-            <p style={{fontSize:14,opacity:.85,lineHeight:1.8}}>Grandview Building<br/>198, Kapsabet<br/>30100, Kenya</p>
-          </div>
-          <div>
-            <h4 style={{fontSize:13,fontWeight:700,textTransform:'uppercase',letterSpacing:'0.08em',opacity:.5,marginBottom:12}}>Contact</h4>
-            <p style={{fontSize:14,opacity:.85,lineHeight:1.8}}>📞 0729 113 409<br/>💬 WhatsApp: +254 704 719 695<br/>✉️ <a href="mailto:Info@orthonexisphysiotherapy.com" style={{color:'#6dd5a0',textDecoration:'none'}}>Info@orthonexisphysiotherapy.com</a></p>
-          </div>
-          <div>
-            <h4 style={{fontSize:13,fontWeight:700,textTransform:'uppercase',letterSpacing:'0.08em',opacity:.5,marginBottom:12}}>Hours</h4>
-            <p style={{fontSize:14,opacity:.85,lineHeight:1.8}}>Mon–Fri: 8:00 AM – 6:00 PM<br/>Saturday: 8:00 AM – 2:00 PM<br/>Sunday: Closed</p>
-          </div>
-        </div>
-        <div style={{textAlign:'center',marginTop:32,paddingTop:24,borderTop:'1px solid rgba(255,255,255,0.1)',fontSize:13,opacity:.5,color:'#fff'}}>
-          © {new Date().getFullYear()} Orthonexis Physiotherapy Health Group. All rights reserved.
-        </div>
-      </section>
+           <SiteFooter /> 
     </main>
   );
 }

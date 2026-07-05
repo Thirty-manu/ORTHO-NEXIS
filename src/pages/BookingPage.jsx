@@ -39,7 +39,7 @@ export default function BookingPage() {
         time: form.time,
         notes: form.notes,
         isHomeCare: form.isHomeCare,
-        address: form.isHomeCare ? form.address : 'Grandview Building, 198, Kapsabet 30100',
+        address: form.isHomeCare ? form.address : 'next to Rubis petrol station, Kapsabet Sports house MCCU Building',
         status: 'pending',
         refCode: ref,
         createdAt: serverTimestamp()
@@ -65,7 +65,7 @@ export default function BookingPage() {
             <div style={{fontSize:12, color:'var(--color-text-muted)', marginTop:6}}>Save this number to track your appointment</div>
           </div>
           <div style={{background:'var(--color-surface)', border:'1px solid var(--color-border)', borderRadius:'var(--radius-lg)', padding:20, textAlign:'left', marginBottom:24}}>
-            {[['Service', selectedService?.name], ['Concern', form.subService||'—'], ['Date', form.date], ['Time', form.time], ['Location', form.isHomeCare ? `Home Visit: ${form.address}` : 'Grandview Building, 198, Kapsabet 30100']].map(([k,v]) => (
+            {[['Service', selectedService?.name], ['Concern', form.subService||'—'], ['Date', form.date], ['Time', form.time], ['Location', form.isHomeCare ? `Home Visit: ${form.address}` : 'next to Rubis petrol station, Kapsabet Sports house MCCU Building']].map(([k,v]) => (
               <div key={k} style={{display:'flex', justifyContent:'space-between', padding:'8px 0', borderBottom:'1px solid var(--color-border)', fontSize:14}}>
                 <span style={{color:'var(--color-text-muted)'}}>{k}</span>
                 <span style={{fontWeight:600}}>{v}</span>
@@ -73,7 +73,7 @@ export default function BookingPage() {
             ))}
           </div>
           <div style={{fontSize:13, color:'var(--color-text-muted)', background:'#fff8e1', border:'1px solid #ffe082', borderRadius:'var(--radius-md)', padding:12, marginBottom:24}}>
-            📞 For inquiries call <strong>0729 113 409</strong> or WhatsApp <strong>+254 704 719 695</strong>
+            📞 For inquiries call <strong>07 10 622 217</strong> or WhatsApp <strong>+254 710 622 217</strong>
           </div>
           <button className="btn btn-primary" style={{width:'100%', justifyContent:'center', padding:14}} onClick={()=>navigate('/')}>Back to Home</button>
         </div>
@@ -92,7 +92,7 @@ export default function BookingPage() {
     <div className="booking-page">
       <div className="container" style={{maxWidth:680, width:'100%', paddingTop:32, paddingBottom:60}}>
         <h1 style={{fontSize:'clamp(1.4rem,4vw,1.8rem)', marginBottom:6}}>Book an Appointment</h1>
-        <p style={{color:'var(--color-text-muted)', marginBottom:28, fontSize:14}}>📍 Orthonexis Physiotherapy — Grandview Building, Kapsabet 30100</p>
+        <p style={{color:'var(--color-text-muted)', marginBottom:28, fontSize:14}}>📍 Orthonexis Physiotherapy — next to Rubis petrol station, Kapsabet Sports house MCCU Building 30100</p>
 
         <div style={{display:'flex', flexDirection:'column', gap:12}}>
           {STEPS.map((label, i) => {
@@ -216,7 +216,7 @@ export default function BookingPage() {
                     {i === 3 && (
                       <div>
                         <div style={{background:'var(--color-surface)', border:'1px solid var(--color-border)', borderRadius:10, padding:16, marginBottom:16}}>
-                          {[['Service',selectedService?.name],['Concern',form.subService||'—'],['Date',form.date],['Time',form.time],['Name',form.patientName],['Phone',form.phone],['Email',form.email||'—'],['Location',form.isHomeCare?`Home Visit: ${form.address}`:'Grandview Building, Kapsabet'],['Notes',form.notes||'—']].map(([k,v])=>(
+                          {[['Service',selectedService?.name],['Concern',form.subService||'—'],['Date',form.date],['Time',form.time],['Name',form.patientName],['Phone',form.phone],['Email',form.email||'—'],['Location',form.isHomeCare?`Home Visit: ${form.address}`:'next to Rubis petrol station, Kapsabet Sports house MCCU Building'],['Notes',form.notes||'—']].map(([k,v])=>(
                             <div key={k} style={{display:'flex', justifyContent:'space-between', gap:12, padding:'7px 0', borderBottom:'1px solid var(--color-border)', fontSize:14}}>
                               <span style={{color:'var(--color-text-muted)'}}>{k}</span>
                               <span style={{fontWeight:600, textAlign:'right', maxWidth:'60%'}}>{v}</span>
