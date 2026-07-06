@@ -13,7 +13,7 @@ export default function HomePage() {
           </div>
           <div style={{textAlign:"center",marginBottom:16,display:"flex",alignItems:"center",justifyContent:"center",gap:14,width:"100%"}}>
             <div style={{height:1, flex:1, maxWidth:60, background:"rgba(255,255,255,0.35)"}}></div>
-            <span style={{fontSize:17,fontWeight:700,letterSpacing:"0.12em",textTransform:"uppercase",color:"#6dd5a0",whiteSpace:"nowrap"}}>Orthonexis Physiotherapy Health Group</span>
+            <span className="hero-brand-label" style={{fontSize:17,fontWeight:700,letterSpacing:"0.12em",textTransform:"uppercase",color:"#6dd5a0",display:"block",textAlign:"center"}}>Orthonexis Physiotherapy<br className="hero-brand-break" />Health Group</span>
             <div style={{height:1, flex:1, maxWidth:60, background:"rgba(255,255,255,0.35)"}}></div>
           </div>
           <div className="hero-badge">📍 next to Rubis petrol station, Kapsabet Sports house MCCU Building</div>

@@ -89,13 +89,6 @@ img{display:block;max-width:100%}button{cursor:pointer;font-family:inherit}input
 .ham-mid-open{opacity:0;}
 .ham-bot-open{transform:translateY(-7px) rotate(-45deg);}
 
-.mobile-menu{
-  display:none;
-  padding:14px 16px 18px;
-  background:#fff;
-  border-top:1px solid rgba(12,95,165,0.14);
-  box-shadow:0 8px 20px rgba(12,95,165,0.08);
-}
 .mobile-nav-link{
   display:block;
   width:100%;
@@ -133,9 +126,7 @@ img{display:block;max-width:100%}button{cursor:pointer;font-family:inherit}input
     min-height:74px;
   }
   
-  .mobile-menu{
-    display:block;
-  }
+  
 }
 
 
@@ -175,7 +166,7 @@ img{display:block;max-width:100%}button{cursor:pointer;font-family:inherit}input
 /* ── Mobile Nav: horizontal scrollable row ── */
 @media (max-width: 768px) {
   .nav-right-desktop { display: none; }
-  .mobile-menu-btn { display: none !important; }
+  
   .navbar-nav {
     display: flex !important;
     flex-direction: row;
@@ -219,25 +210,70 @@ img{display:block;max-width:100%}button{cursor:pointer;font-family:inherit}input
   .hero-badge { font-size: 12px; padding: 6px 14px; }
 }
 
-/* ── Mobile Nav ── */
+/* ── Mobile Nav (consolidated, single source of truth) ── */
 .mobile-nav-row { display: none; }
+
 @media (max-width: 768px) {
   .desktop-nav, .nav-right-desktop { display: none !important; }
+
+  .navbar-inner {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 12px 6px;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .navbar-logo-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    align-self: center;
+    flex-shrink: 0;
+  }
+
+  .navbar-logo-img {
+    height: 40px;
+    width: auto;
+  }
+
   .mobile-nav-row {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
     gap: 6px;
-    flex: 1;
-    justify-content: flex-end;
   }
+
   .mobile-nav-links {
     display: flex;
+    flex: 1;
     overflow-x: auto;
     scrollbar-width: none;
-    gap: 2px;
+    gap: 4px;
+    padding-bottom: 2px;
   }
   .mobile-nav-links::-webkit-scrollbar { display: none; }
-  .mobile-nav-links .nav-link { white-space: nowrap; font-size: 12px; padding: 6px 10px; }
+
+  .mobile-nav-links .nav-link {
+    white-space: nowrap;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 12px;
+    color: #0f3638;
+    background: #f0f7f7;
+    border-radius: 20px;
+    border: 1.5px solid #cce4e4;
+    text-decoration: none;
+  }
+  .mobile-nav-links .nav-link.active,
+  .mobile-nav-links .nav-link:hover {
+    background: #01696f;
+    color: #ffffff;
+    border-color: #01696f;
+  }
+
   .hamburger-btn {
     display: flex;
     flex-direction: column;
@@ -245,8 +281,9 @@ img{display:block;max-width:100%}button{cursor:pointer;font-family:inherit}input
     background: none;
     border: none;
     cursor: pointer;
-    padding: 6px;
+    padding: 6px 8px;
     flex-shrink: 0;
+    margin-right: 4px;
   }
   .hamburger-btn span {
     display: block;
@@ -255,6 +292,7 @@ img{display:block;max-width:100%}button{cursor:pointer;font-family:inherit}input
     background: var(--color-text);
     border-radius: 2px;
   }
+
   .mobile-dropdown {
     background: var(--color-surface);
     border-top: 1px solid var(--color-border);
@@ -280,138 +318,7 @@ img{display:block;max-width:100%}button{cursor:pointer;font-family:inherit}input
   .mobile-dropdown-item:hover { background: var(--color-surface-offset); }
 }
 
-/* ── Mobile Nav Links - bigger + better colors ── */
-@media (max-width: 768px) {
-  .mobile-nav-links .nav-link {
-    white-space: nowrap;
-    font-size: 14px !important;
-    padding: 8px 12px !important;
-    font-weight: 600 !important;
-    color: #0f3638 !important;
-    background: #f0f7f7 !important;
-    border-radius: 20px !important;
-    border: 1.5px solid #cce4e4 !important;
-    text-decoration: none !important;
-  }
-  .mobile-nav-links .nav-link.active {
-    background: #01696f !important;
-    color: #ffffff !important;
-    border-color: #01696f !important;
-  }
-  .mobile-nav-links .nav-link:hover {
-    background: #01696f !important;
-    color: #ffffff !important;
-    border-color: #01696f !important;
-  }
-  .navbar-inner { height: 60px; }
-}
 
-/* ── Fix hamburger cut off ── */
-@media (max-width: 768px) {
-  .navbar-inner { padding-right: 12px !important; }
-  .hamburger-btn { 
-    padding: 6px 8px !important;
-    margin-right: 4px !important;
-    flex-shrink: 0 !important;
-  }
-  .mobile-nav-row { 
-    overflow: hidden;
-    max-width: calc(100vw - 90px);
-  }
-  .mobile-nav-links {
-    padding-right: 4px;
-  }
-}
-
-/* ── Shrink logo on mobile to give nav more room ── */
-@media (max-width: 768px) {
-  .navbar-logo-img { 
-    height: 32px !important; 
-    width: auto !important;
-  }
-  .navbar-logo-link { 
-    flex-shrink: 0;
-    margin-right: 4px;
-  }
-  .mobile-nav-row {
-    max-width: calc(100vw - 70px) !important;
-  }
-}
-
-/* ── Two-row mobile navbar: logo on top, nav below ── */
-@media (max-width: 768px) {
-  .navbar-inner {
-    flex-direction: column !important;
-    height: auto !important;
-    padding: 8px 12px 6px !important;
-    gap: 6px !important;
-    align-items: flex-start !important;
-  }
-  .navbar-logo-link {
-    align-self: flex-start;
-  }
-  .navbar-logo-img {
-    height: 36px !important;
-  }
-  .mobile-nav-row {
-    width: 100% !important;
-    max-width: 100% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-  }
-  .mobile-nav-links {
-    flex: 1;
-    display: flex;
-    overflow-x: auto;
-    gap: 4px;
-    scrollbar-width: none;
-    padding-bottom: 2px;
-  }
-  .mobile-nav-links::-webkit-scrollbar { display: none; }
-  .mobile-nav-links .nav-link {
-    font-size: 12px !important;
-    padding: 6px 10px !important;
-    white-space: nowrap;
-  }
-}
-
-/* ── Mobile: centered logo row on top ── */
-@media (max-width: 768px) {
-  .navbar-inner {
-    flex-direction: column !important;
-    height: auto !important;
-    padding: 10px 12px 6px !important;
-    gap: 8px !important;
-    align-items: center !important;
-  }
-  .navbar-logo-link {
-    display: flex !important;
-    align-items: center !important;
-    gap: 8px !important;
-    align-self: center !important;
-  }
-  .navbar-logo-img {
-    height: 44px !important;
-    width: auto !important;
-  }
-
-  .mobile-nav-row {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-  .mobile-nav-links {
-    flex: 1;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-  .mobile-nav-links::-webkit-scrollbar { display: none; }
-  .mobile-nav-links .nav-link {
-    font-size: 12px !important;
-    padding: 6px 10px !important;
-    white-space: nowrap;
-  }
-}
 
 /* ── Logo visibility fix: teal background circle ── */
 .navbar-logo-img {
@@ -591,3 +498,96 @@ button {
   }
 }
 
+
+/* ===== Navbar mobile fix ===== */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 12px !important;
+  }
+
+  .nav-links {
+    display: none !important;
+  }
+
+  
+
+  
+
+  
+}
+
+@media (min-width: 769px) {
+  
+
+  
+}
+
+
+/* ── WhatsApp nav link: allow 2-line wrap without breaking row ── */
+@media (max-width: 768px) {
+  .mobile-nav-links {
+    align-items: stretch;
+  }
+  .mobile-nav-links .nav-link {
+    white-space: normal;
+    text-align: center;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 34px;
+  }
+}
+
+/* ── Hero title: force 2-line break for brand name ── */
+@media (max-width: 768px) {
+  .hero-title-brand {
+    display: block;
+    max-width: 100%;
+  }
+  .hero-title-brand br {
+    display: block;
+  }
+}
+
+
+/* ── Hero brand label: 2-line wrap on mobile only ── */
+.hero-brand-break { display: none; }
+@media (max-width: 480px) {
+  .hero-brand-break { display: block; }
+  .hero-brand-label { line-height: 1.4; }
+}
+
+/* ── WhatsApp nav link: allow 2-line wrap without breaking row ── */
+@media (max-width: 768px) {
+  .mobile-nav-links {
+    align-items: stretch;
+  }
+  .mobile-nav-links .nav-link {
+    white-space: normal;
+    text-align: center;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 34px;
+  }
+}
+
+/* ── Mobile nav: wrap into rows instead of horizontal scroll/clip ── */
+@media (max-width: 768px) {
+  .mobile-nav-row {
+    max-width: none !important;
+    overflow: visible !important;
+  }
+  .mobile-nav-links {
+    flex-wrap: wrap !important;
+    overflow-x: visible !important;
+    justify-content: flex-start;
+    row-gap: 6px;
+  }
+  .mobile-nav-links .nav-link {
+    white-space: nowrap;
+    flex: 0 0 auto;
+  }
+}
