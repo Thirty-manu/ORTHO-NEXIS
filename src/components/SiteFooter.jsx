@@ -10,7 +10,7 @@ export default function SiteFooter() {
         </div>
         <div>
           <h4 style={{ fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', opacity: 0.5, marginBottom: 12 }}>Location</h4>
-          <p style={{ fontSize: 14, opacity: 0.85, lineHeight: 1.8 }}>next to Rubis petrol station,<br />Kapsabet Sports house MCCU Building.
+          <p style={{ fontSize: 14, opacity: 0.85, lineHeight: 1.8 }}>next to Rubis petrol station,<br />Kapsabet Sports house MCCU Building.</p>
           <div style={{ marginTop: 16, borderRadius: 10, overflow: 'hidden' }}>
             <iframe
               title="Orthonexis Location"
@@ -29,7 +29,7 @@ export default function SiteFooter() {
             style={{ display: 'inline-block', marginTop: 10, color: '#6dd5a0', fontWeight: 700, fontSize: 14 }}
           >
             📍 Open in Google Maps
-          </a><br /></p>
+          </a>
         </div>
         <div>
           <h4 style={{ fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', opacity: 0.5, marginBottom: 12 }}>Call Us</h4>
