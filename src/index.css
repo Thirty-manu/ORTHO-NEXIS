@@ -591,3 +591,24 @@ button {
     flex: 0 0 auto;
   }
 }
+
+/* ── Cross-browser safe mobile nav wrap (fixes WebKit flex-gap bug) ── */
+@media (max-width: 768px) {
+  .mobile-nav-links {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0 !important;
+    overflow: visible !important;
+  }
+  .mobile-nav-links .nav-link {
+    margin: 4px 4px 4px 0 !important;
+    white-space: nowrap;
+    flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+  }
+  .mobile-nav-row {
+    max-width: none !important;
+    overflow: visible !important;
+    -webkit-overflow-scrolling: touch;
+  }
+}
